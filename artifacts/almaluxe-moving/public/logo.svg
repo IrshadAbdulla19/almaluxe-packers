@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 68" role="img" aria-label="Almaluxe Packers and Movers">
+  <rect width="240" height="68" rx="4" fill="#191815"/>
+  <path d="M15 48 32 14h11l17 34H48l-3-7H29l-3 7Zm18-15h9l-4-10z" fill="#f4f0e7"/>
+  <text x="65" y="43" fill="#f4f0e7" font-family="Arial,sans-serif" font-size="32" font-style="italic" font-weight="800" letter-spacing="-2">ALMALUX</text>
+  <text x="180" y="43" fill="#e3b500" font-family="Arial,sans-serif" font-size="32" font-style="italic" font-weight="800">E</text>
+  <path d="M16 53h207" stroke="#e3b500" stroke-width="2"/>
+  <text x="66" y="63" fill="#ddd6c6" font-family="Arial,sans-serif" font-size="7" font-weight="600" letter-spacing="2.2">PACKERS AND MOVERS</text>
+</svg>

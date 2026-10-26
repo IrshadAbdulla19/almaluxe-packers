@@ -1,6 +1,6 @@
-# [Project name]
+# Almaluxe Packers & Movers
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A public moving-services website and private enquiry dashboard for Almaluxe Packers & Movers.
 
 ## Run & Operate
 
@@ -22,23 +22,31 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/almaluxe-moving/` — public website and admin interface
+- `artifacts/api-server/` — Express API and integrations
+- `lib/api-spec/openapi.yaml` — API contract source of truth
+- `artifacts/api-server/src/models/` — MongoDB/Mongoose models
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Enquiries use MongoDB, as explicitly requested; do not migrate them to the workspace PostgreSQL database.
+- The public website is only for Almaluxe Packers & Movers. Do not include Almaluxe Export LLP branding or food-export products.
+- Admin routes must check the account's server-verified Clerk public metadata role; authentication alone is not admin access.
+- External lead integrations remain disabled until the business configures and authorizes them.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Visitors can explore services and request a moving quote. Verified administrators can review, search, update, annotate, and export enquiries.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Do not invent contact details, prices, reviews, credentials, coverage, insurance, or service guarantees.
+- Treat route and service availability as subject to confirmation before booking.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- `MONGODB_URI` is required for lead persistence; the app must fail clearly rather than silently fall back to in-memory or PostgreSQL storage.
+- Clerk public metadata role `admin` is required for lead dashboard access.
 
 ## Pointers
 

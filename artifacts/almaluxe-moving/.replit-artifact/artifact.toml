@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Almaluxe Packers & Movers"
+description = "A responsive website for Almaluxe Packers & Movers with service information, quote requests, and secure enquiry management for administrators."
+version = "1.0.0"
+id = "artifacts/almaluxe-moving"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25706
+
+[services.development]
+run = "pnpm --filter @workspace/almaluxe-moving run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/almaluxe-moving", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/almaluxe-moving/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25706"
+BASE_PATH = "/"
