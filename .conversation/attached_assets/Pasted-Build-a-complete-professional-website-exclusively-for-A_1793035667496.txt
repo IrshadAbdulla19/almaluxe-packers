@@ -1,0 +1,47 @@
+Build a complete, professional website exclusively for Almaluxe Packers and Movers.
+
+Do not include Almaluxe Export LLP or food export products in this project.
+
+BUSINESS AND DESIGN
+- Business: Almaluxe Packers and Movers
+- Primary service area: Thrissur, Kerala, India, subject to confirmation
+- Brand style: premium black, gold/yellow, and white
+- Use my supplied promotional image as a design and branding reference.
+- Create a polished, trustworthy, modern website with responsive desktop and mobile layouts.
+
+PAGES
+1. Home
+2. About Us
+3. Moving Services
+4. Service Areas
+5. Request a Quote
+6. Contact Us
+7. Privacy Policy
+
+SERVICES
+Create sections for household shifting, office relocation, packing and unpacking, loading and unloading, and local or long-distance moving where the business confirms those services.
+
+HOME PAGE
+Include a compelling hero section, moving truck imagery, clear calls to action, service highlights, a step-by-step moving process, frequently asked questions, and contact information.
+
+QUOTE FORM
+Collect customer name, phone number, email where provided, pickup location, destination, moving date, property type, preferred services, and additional details.
+
+LEAD MANAGEMENT
+Build a secure admin dashboard with login, searchable enquiries, lead source, status updates, internal notes, and CSV export.
+
+Use MongoDB, Express, React, and Node.js so I can learn the MERN stack. Store enquiries securely. Prepare integration modules for Google Sheets, WhatsApp Business Platform, and eligible Facebook and Instagram lead forms.
+
+SECURITY
+Protect admin routes and database operations. Validate submissions on the server, prevent spam, keep secrets out of frontend code, and never expose customer records publicly.
+
+DESIGN QUALITY
+Use reusable components, accessible forms, consistent typography, smooth but restrained animations, SEO metadata, and optimized images. Ensure every button and link has a real purpose.
+
+IMPORTANT
+Do not invent phone numbers, email addresses, prices, customer reviews, company certifications, insurance coverage, or service guarantees. Use clearly identified placeholders for details I need to confirm.
+
+DELIVERY
+Build the full application, test the major workflows, fix errors, and document how to run and deploy it. Explain the project structure so I can learn how to modify it later as a Flutter developer learning MERN.
+
+Start by creating the complete website plan, then implement the application in stages without stopping at a static homepage.
