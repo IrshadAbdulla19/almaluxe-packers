@@ -19,6 +19,16 @@ Clerk keys are provisioned by Replit. Authentication alone does not grant
 dashboard access. Grant `publicMetadata.role = "admin"` to the intended user in
 both the Development and Production Clerk environments.
 
+## Publish
+
+The website and API are separate artifacts in this Replit project and publish
+together. Before publishing, add `MONGODB_URI` to the Production secrets and
+set `publicMetadata.role = "admin"` for the intended Clerk user in the
+Production environment. Without MongoDB configured, the website remains
+available but quote submissions and enquiry management cannot persist data.
+Publish the project from Replit after those production settings are in place,
+then check the homepage, quote flow and `/api/healthz`.
+
 ## Pages
 
 - `/` — home

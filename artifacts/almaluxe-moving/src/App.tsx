@@ -165,6 +165,19 @@ function HomePage() {
           <div className="process-step"><span className="process-index mono">03</span><div><h3>Discuss next steps</h3><p>Booking follows only after availability is confirmed with you.</p></div><ArrowRight size={16} /></div>
         </div>
       </section>
+      <section className="faq-section page-section" aria-labelledby="faq-heading">
+        <div className="faq-heading">
+          <span className="section-kicker">FREQUENTLY ASKED</span>
+          <h2 id="faq-heading" className="display">Clear answers<br /><em>before you move.</em></h2>
+          <p>Every move is different. We’ll confirm route and service availability with you before any booking.</p>
+        </div>
+        <div className="faq-list">
+          <details><summary>Is Thrissur your primary service area?<span aria-hidden="true">+</span></summary><p>Yes. The supplied company information identifies Thrissur as the primary area. Please share your pickup and destination so the team can confirm coverage for your specific move.</p></details>
+          <details><summary>Can I request a move to any destination?<span aria-hidden="true">+</span></summary><p>You can send a request for your route. Availability depends on the locations, date and services needed, and will be confirmed by the team.</p></details>
+          <details><summary>Does a quote request confirm my booking?<span aria-hidden="true">+</span></summary><p>No. A quote request is an enquiry only. Your move is not booked unless the team confirms availability and next steps with you.</p></details>
+          <details><summary>What details should I include?<span aria-hidden="true">+</span></summary><p>Share your pickup and destination, preferred moving date, property type and the services you’re interested in. You can add other useful details in the message field.</p></details>
+        </div>
+      </section>
       <section className="contact-ribbon"><div><span className="section-kicker">READY WHEN YOU ARE</span><h2 className="display">Start with a few details.</h2></div><Link href="/quote" className="button button-gold" data-testid="link-home-bottom-quote">Request a quote <ArrowUpRight size={17} /></Link></section>
     </main>
   </PublicPage>;
@@ -276,14 +289,15 @@ function PrivacyPage() {
     <section className="privacy-content page-section"><aside><span className="section-kicker">PRIVACY / ENQUIRIES</span><span className="mono">ALMALUXE · THRISSUR</span><span className="section-kicker privacy-aside-label">QUESTIONS?</span><a href={`mailto:${email}`}>{email}</a></aside><div className="privacy-article">
       <h2>Information you choose to share</h2><p>The enquiry form asks for your name, phone number, optional email address, pickup location, destination, preferred moving date, property type, requested service information and any additional details you provide.</p>
       <h2>Why we request it</h2><p>We use these details to receive and review your moving enquiry, contact you about it, and determine whether the specific route and requested service can be confirmed. A submission is not a booking.</p>
+      <h2>Storage and integrations</h2><p>When enquiry storage is configured, form submissions are saved in MongoDB so the authorized team can review them. Optional Google Sheets, WhatsApp Business and Facebook or Instagram lead integrations are not active by default; the site does not send enquiries to those services unless the business separately configures them.</p>
       <h2>How to contact us</h2><p>For a question about information you have submitted, contact Almaluxe Packers & Movers at <a href={`mailto:${email}`}>{email}</a> or by phone at <a href="tel:+919447834071">+91 94478 34071</a>.</p>
       <h2>Availability and booking</h2><p>Submitting details does not mean a route or service is available. Thrissur is the primary service area, and each route and service request must be confirmed before booking.</p>
     </div></section>
   </main></PublicPage>;
 }
 
-function SignInPage() { return <div className="auth-page"><Link href="/" className="auth-brand"><BrandMark /></Link><div className="auth-shell"><div className="auth-side"><span className="section-kicker">ALMALUXE / LEAD DESK</span><h1 className="display">A calmer view<br />of every enquiry.</h1><p>Team access for managing moving requests.</p><div className="auth-mark display">A<span>.</span></div></div><div className="auth-card"><SignIn routing="path" path={`${basePath}/sign-in`} signUpUrl={`${basePath}/sign-up`} /></div></div></div>; }
-function SignUpPage() { return <div className="auth-page"><Link href="/" className="auth-brand"><BrandMark /></Link><div className="auth-shell"><div className="auth-side"><span className="section-kicker">ALMALUXE / LEAD DESK</span><h1 className="display">Make room<br />for clarity.</h1><p>Create an account to continue to the lead desk.</p><div className="auth-mark display">A<span>.</span></div></div><div className="auth-card"><SignUp routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} /></div></div></div>; }
+function SignInPage() { return <div className="auth-page"><div className="auth-brand"><BrandMark /></div><div className="auth-shell"><div className="auth-side"><span className="section-kicker">ALMALUXE / LEAD DESK</span><h1 className="display">A calmer view<br />of every enquiry.</h1><p>Team access for managing moving requests.</p><div className="auth-mark display">A<span>.</span></div></div><div className="auth-card"><SignIn routing="path" path={`${basePath}/sign-in`} signUpUrl={`${basePath}/sign-up`} /></div></div></div>; }
+function SignUpPage() { return <div className="auth-page"><div className="auth-brand"><BrandMark /></div><div className="auth-shell"><div className="auth-side"><span className="section-kicker">ALMALUXE / LEAD DESK</span><h1 className="display">Make room<br />for clarity.</h1><p>Create an account to continue to the lead desk.</p><div className="auth-mark display">A<span>.</span></div></div><div className="auth-card"><SignUp routing="path" path={`${basePath}/sign-up`} signInUrl={`${basePath}/sign-in`} /></div></div></div>; }
 
 const clerkAppearance = {
   theme: shadcn, cssLayerName: 'clerk',
@@ -291,7 +305,7 @@ const clerkAppearance = {
   variables: { colorPrimary: '#d7a700', colorForeground: '#29251e', colorMutedForeground: '#756f63', colorDanger: '#a64135', colorBackground: '#fbf9f2', colorInput: '#fffdf8', colorInputForeground: '#29251e', colorNeutral: '#ddd6c6', fontFamily: 'DM Sans, sans-serif', borderRadius: '0.65rem' },
   elements: {
     rootBox: 'w-full flex justify-center',
-    cardBox: 'bg-[#fbf9f2] rounded-2xl w-[440px] max-w-full overflow-hidden',
+    cardBox: 'bg-[#fbf9f2] rounded-2xl w-[440px] max-w-full mx-auto overflow-hidden',
     card: '!shadow-none !border-0 !bg-transparent !rounded-none',
     footer: '!shadow-none !border-0 !bg-transparent !rounded-none',
     headerTitle: 'text-[#29251e] font-semibold', headerSubtitle: 'text-[#756f63]',

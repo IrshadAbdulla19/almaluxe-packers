@@ -4,19 +4,20 @@ A public moving-services website and private enquiry dashboard for Almaluxe Pack
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/api-server run dev` — run the API server (port 8080)
 - `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
+- `PORT=25706 BASE_PATH=/ pnpm --filter @workspace/almaluxe-moving run build` — build the website artifact
+- `pnpm --filter @workspace/api-server run build` — build the API artifact
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- Required env for quote storage: `MONGODB_URI` — MongoDB connection string, stored in Replit Secrets
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
+- Website: React 19 + Vite
 - API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
+- DB: MongoDB + Mongoose
+- Validation: Zod (`zod/v4`)
 - API codegen: Orval (from OpenAPI spec)
 - Build: esbuild (CJS bundle)
 
